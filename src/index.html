@@ -4,55 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./scss/main.css" />
 
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script defer src="script.js"></script>
+
     <title>Giarddesign</title>
   </head>
   <body>
-    <!-- Button trigger modal -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      Launch demo modal
-    </button>
+    <!-- Navigation -->
+    <nav class="navbar py-24 text-black">
+      <div class="container p-0 ">
+        <a href="#" class="navbar-brand">
+          <img src="./assets/menu/giarddesign.svg" alt="Logo giarddesign"
+        /></a>
+        <ul
+          class="navbar-nav flex-lg-row flex-column align-items-center pt-80 p-lg-0 ms-lg-auto gap-lg-48 gap-5 main-nav"
+        >
+          <li class="nav-item">
+            <a href="#">
+              <div class="d-flex gap-5 align-items-center justify-content-center open-submenu ">
+                <span>Oferta</span>
+                <img
+                  src="./assets/menu/Icon.svg"
+                  alt="arrow"
+                  class="arrow-down"
+                />
+              </div>
+            </a>
+            <ul class="submenu-menu hidden ">
+              <li class="submenu-item p-5"><a href="#">Oferta 1</a></li>
+              <li class="submenu-item p-5"><a href="#">Oferta 2</a></li>
+              <li class="submenu-item p-5"><a href="#">Oferta 3</a></li>
+              <li class="submenu-item p-5"><a href="#">Oferta 4</a></li>
+              <li class="submenu-item p-5"><a href="#">Oferta 5</a></li>
+            </ul>
+            </li>
+          </li class="nav-item">
+          <li class="nav-item"><a href="#">O firmie</a></li>
+          <li class="nav-item"><a href="#">Realizacje</a></li>
+          <li class="nav-item"><a href="#">Kontakt</a></li>
+          <li class="nav-item">
+            <form class="d-flex form-search justify-content-center" role="search">
+              <input class="input-search"  type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-search " type="submit"><img src="./assets/menu/Icon 01.svg" alt="search icon" /></button>
+            </form>
+            
+            </li>
+        </ul>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
+        <a class="btn-mobile-nav d-flex flex-column gap-5" href="#">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </a>
       </div>
-    </div>
+    </nav>
   </body>
 </html>

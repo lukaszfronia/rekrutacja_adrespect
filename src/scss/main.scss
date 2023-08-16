@@ -2,7 +2,205 @@
 // Option A: Include all of Bootstrap
 
 // Include any default variable overrides here (though functions won't be available)
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1600px,
+  4xl: 1750px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1262px
+    // zmienione,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+);
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  5: $spacer * 0.5,
+  24: $spacer * 2.4,
+  48: $spacer * 4.8,
+  80: $spacer * 8,
+);
+
+$black: #111;
+$grey: #f5f0ec;
+$beige: #dcc1ab;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Then add additional custom code here
+/////////////////////////////////////////////  General Styles  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // font = 10px;
+  font-family: Inter;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  letter-spacing: -0.14px;
+}
+li {
+  cursor: pointer;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+////////////////////////////////////////////  Navigation Styles  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+.navbar {
+  .btn-mobile-nav {
+    display: none;
+  }
+  .arrow-down {
+    transition: all 0.2s ease-in;
+  }
+
+  .nav-item {
+    position: relative;
+
+    .hidden {
+      display: none;
+    }
+
+    .submenu-menu {
+      position: absolute;
+      top: 30px;
+      left: -50px;
+      padding: 0;
+      background-color: #f2f2f2;
+      filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.234));
+
+      &:before {
+        content: "";
+        background-color: #f2f2f2;
+        width: 13px;
+        height: 13px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: rotate(45deg) translateX(-50%);
+      }
+      .submenu-item {
+        border-bottom: 1px solid #bcbcbc;
+        width: 150px;
+      }
+    }
+
+    .form-search {
+      .input-search {
+        position: relative;
+        width: 0;
+        border: none;
+        transition: width 0.9s linear;
+        border-radius: 3px;
+
+        &::placeholder {
+          padding: 1rem;
+          color: #111;
+        }
+      }
+      .active {
+        border: 1px solid #bcbcbc;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .navbar {
+    .btn-mobile-nav {
+      display: block;
+
+      z-index: 9999;
+
+      & .line {
+        width: 28px;
+        height: 4px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 3px;
+        transition: all 0.3s;
+      }
+    }
+
+    .main-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translateX(-1000px);
+
+      background-color: #e0e0e0b4;
+      width: 100%;
+      width: 100%;
+      height: 100vh;
+
+      transition: all 1.2s linear;
+    }
+
+    .nav-open {
+      transform: translateX(0);
+    }
+    .arrow-down {
+      height: 15px;
+      width: 15px;
+    }
+
+    .navbar-nav {
+      font-size: 2.4rem;
+
+      .nav-item {
+        width: 100%;
+        text-align: center;
+
+        .submenu-menu {
+          font-size: inherit;
+          position: static;
+          top: 5px;
+          left: 0;
+
+          .submenu-item {
+            width: 100%;
+          }
+        }
+
+        .form-search {
+          .input-search {
+            &::placeholder {
+              font-size: 2rem;
+            }
+          }
+          .active {
+            border: 1px solid #bcbcbc;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/////////////////////////////////////////////// Hero Section \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
