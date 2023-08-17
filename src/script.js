@@ -39,3 +39,25 @@ openSubMenu.addEventListener("click", () => {
 btnSearch.addEventListener("click", () => {
   inputSearch.classList.toggle("active");
 });
+
+const navbarHeader = document.querySelector(".navbar-header");
+const navHeight = navbarHeader.getBoundingClientRect().height;
+const sectionHero = document.querySelector(".section-hero");
+
+console.log(navHeight);
+
+const options = {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+};
+
+const observer = new IntersectionObserver((entries) => {
+  const [entry] = entries;
+
+  !entry.isIntersecting
+    ? navbarHeader.classList.add("sticky")
+    : navbarHeader.classList.remove("sticky");
+}, options);
+
+observer.observe(sectionHero);
