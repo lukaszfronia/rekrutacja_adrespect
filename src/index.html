@@ -21,17 +21,19 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar py-24 text-black">
-      <div class="container p-0 ">
+    <nav class="navbar py-24 text-black px-89">
+      <div class="container-fluid p-0">
         <a href="#" class="navbar-brand">
           <img src="./assets/menu/giarddesign.svg" alt="Logo giarddesign"
         /></a>
         <ul
-          class="navbar-nav flex-lg-row flex-column align-items-center pt-80 p-lg-0 ms-lg-auto gap-lg-48 gap-5 main-nav"
+          class="navbar-nav flex-lg-row flex-column align-items-center py-80 p-lg-0 ms-lg-auto gap-lg-48 gap-5 main-nav"
         >
           <li class="nav-item">
             <a href="#">
-              <div class="d-flex gap-5 align-items-center justify-content-center open-submenu ">
+              <div
+                class="d-flex gap-5 align-items-center justify-content-center open-submenu"
+              >
                 <span>Oferta</span>
                 <img
                   src="./assets/menu/Icon.svg"
@@ -40,25 +42,34 @@
                 />
               </div>
             </a>
-            <ul class="submenu-menu hidden ">
+            <ul class="submenu-menu hidden">
               <li class="submenu-item p-5"><a href="#">Oferta 1</a></li>
               <li class="submenu-item p-5"><a href="#">Oferta 2</a></li>
               <li class="submenu-item p-5"><a href="#">Oferta 3</a></li>
               <li class="submenu-item p-5"><a href="#">Oferta 4</a></li>
               <li class="submenu-item p-5"><a href="#">Oferta 5</a></li>
             </ul>
-            </li>
-          </li class="nav-item">
+          </li>
+
           <li class="nav-item"><a href="#">O firmie</a></li>
           <li class="nav-item"><a href="#">Realizacje</a></li>
           <li class="nav-item"><a href="#">Kontakt</a></li>
           <li class="nav-item">
-            <form class="d-flex form-search justify-content-center" role="search">
-              <input class="input-search"  type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-search " type="submit"><img src="./assets/menu/Icon 01.svg" alt="search icon" /></button>
+            <form
+              class="d-flex form-search justify-content-center"
+              role="search"
+            >
+              <input
+                class="input-search"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-search" type="submit">
+                <img src="./assets/menu/Icon 01.svg" alt="search icon" />
+              </button>
             </form>
-            
-            </li>
+          </li>
         </ul>
 
         <a class="btn-mobile-nav d-flex flex-column gap-5" href="#">
@@ -68,5 +79,77 @@
         </a>
       </div>
     </nav>
+
+    <!-- Hero -->
+
+    <section class="section-hero">
+      <div class="container-fluid pe-0 ps-89">
+        <div
+          class="row d-flex justify-content-lg-between align-items-lg-center gap-64 p-0 m-0"
+        >
+          <div
+            class="col-12 col-md hero-left-side d-flex flex-column justify-content-center gap-44 p-0"
+          >
+            <div class="row d-flex justify-content-start m-0 pt-12 pt-md-0">
+              <div class="col p-0 m-0">
+                <div class="row p-0 m-0">
+                  <div class="col-10 col-sm-8 col-xl-9 pb-44 px-0">
+                    <h1>Nowoczesna aranżacja Twojego ogrodu</h1>
+                  </div>
+
+                  <div class="row">
+                    <div
+                      class="col-10 col-lg-10 col-xxl-10 pb-72 pb-md-44 pb-lg-72 px-0"
+                    >
+                      <p>
+                        Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                        estetyka realizacji. Oferujemy kompleksowy zakres
+                        usług z indywidualnym podejściem do każdego projektu.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="row p-0 m-0">
+                    <div
+                      class="col-11 col-sm-10 col-md-11 col-lg-11 col-xxl-10 d-flex align-items-start justify-content-start px-0"
+                    >
+                      <div class="pe-36">
+                        <button
+                          type="button"
+                          class="btn btn-contact d-flex px-22 px-md-8 px-lg-24 pt-12 pb-14 align-items-center"
+                        >
+                          Skontaktuj się z nami
+                        </button>
+                      </div>
+                      <button
+                        type="button "
+                        class="btn btn-more d-flex px-24 px-md-22 pt-12 pb-14 align-items-center gap-8"
+                      >
+                        <span> Zobacz nasze realizacje </span>
+                        <img
+                          class="vector-arrow-down"
+                          src="./assets/hero/Vector.svg"
+                          alt="Arrow down - Vector"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col col-md p-0 d-flex justify-content-start justify-content-md-end right-side"
+          >
+            <img
+              src="./assets/hero/5005cc8dea4835ae282958a4c13cc9c0.png"
+              alt="Hero Photo"
+              class="img-fluid img-slider"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

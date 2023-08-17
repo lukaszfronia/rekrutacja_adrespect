@@ -16,10 +16,10 @@ btnNav.addEventListener("click", () => {
   navbar.classList.toggle("nav-open");
   if (navbar.classList.contains("nav-open")) {
     btnNav.children.item(0).style.transform =
-      "rotate(45deg) translate(0px, 12px)";
+      "rotate(45deg) translate(0px, 11px)";
     btnNav.children.item(1).style.opacity = "0";
     btnNav.children.item(2).style.transform =
-      "rotate(-45deg)  translate(0px, -13px)";
+      "rotate(-45deg)  translate(0px, -12px)";
   } else {
     btnNav.children.item(0).style.transform = "rotate(0deg) ";
     btnNav.children.item(1).style.opacity = "1";
