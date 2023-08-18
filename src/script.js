@@ -141,15 +141,19 @@ var macyInstance = Macy({
 //////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 const showMoreButton = document.querySelector(".btn-show-more");
+const imageContainerOne = document.querySelector(".image-container-one");
 const imageContainerTwo = document.querySelector(".image-container-two");
 const gradientBackground = document.querySelector(".gradient-background");
+
+const imagesContainerOne = [...imageContainerOne.querySelectorAll("img")];
+const imagesContainerTwo = [...imageContainerTwo.querySelectorAll("img")];
 
 showMoreButton.addEventListener("click", () => {
   imageContainerTwo.classList.toggle("hidden");
 
   gradientBackground.classList.toggle("hidden");
   showMoreButton.style.bottom = "0";
-  console.log(showMoreButton.childNodes);
+
   showMoreButton.childNodes[1].textContent = "Zwiń";
   showMoreButton.childNodes[3].style.transform = "rotate(180deg)";
 
@@ -163,3 +167,56 @@ showMoreButton.addEventListener("click", () => {
 setTimeout(() => {
   imageContainerTwo.classList.add("hidden");
 }, 2000);
+
+//////////////////////////////// Popup with images gallery \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+const popupWindow = document.querySelector(".popup");
+const closeBtn = document.querySelector(".close-btn");
+
+const slideImg = document.querySelector(".slide-image");
+
+const leftArrow = document.querySelector(".popup-left-arrow");
+const rightArrow = document.querySelector(".popup-right-arrow");
+
+const popupBackground = document.querySelector(".popup-background");
+
+let currentSlide = 0;
+
+imagesContainerOne.forEach((item, i) => {
+  item.addEventListener("click", () => {
+    changeSlide(i);
+    popupWindow.classList.toggle("popup-open");
+    popupBackground.classList.remove("hidden");
+  });
+});
+imagesContainerTwo.forEach((item, i) => {
+  item.addEventListener("click", () => {
+    changeSlide(i);
+    popupWindow.classList.toggle("popup-open");
+    popupBackground.classList.remove("hidden");
+  });
+});
+
+const changeSlide = (i) => {
+  let imgPath = `./assets/projects/Photo_${i}.png`;
+  slideImg.src = imgPath;
+
+  currentSlide = i;
+};
+
+closeBtn.addEventListener("click", () => {
+  popupWindow.classList.toggle("popup-open");
+  popupBackground.classList.add("hidden");
+});
+
+leftArrow.addEventListener("click", () => {
+  currentSlide > 0
+    ? changeSlide(currentSlide - 1)
+    : changeSlide(imagesContainerOne.length - 1);
+});
+
+rightArrow.addEventListener("click", () => {
+  currentSlide < imagesContainerOne.length - 1
+    ? changeSlide(currentSlide + 1)
+    : changeSlide(0);
+});
