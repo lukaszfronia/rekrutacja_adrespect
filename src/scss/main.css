@@ -25573,6 +25573,9 @@ a:visited {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
+.btn:hover {
+  color: #f5f0ec;
+}
 
 .sticky {
   position: fixed;
@@ -25592,9 +25595,14 @@ a:visited {
   letter-spacing: -0.12px;
 }
 
+.hidden {
+  display: none;
+}
+
 .navbar .btn-mobile-nav {
   display: none;
   border: none;
+  background-color: transparent;
 }
 .navbar .arrow-down {
   transition: all 0.2s ease-in;
@@ -25602,22 +25610,19 @@ a:visited {
 .navbar .nav-item {
   position: relative;
 }
-.navbar .nav-item .hidden {
-  display: none;
-}
 .navbar .nav-item .submenu-menu {
   position: absolute;
   top: 30px;
   left: -50px;
   padding: 0;
-  background-color: #ffffff;
+  background-color: #f5f0ec;
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.234));
   border-radius: 10px;
   z-index: 9999;
 }
 .navbar .nav-item .submenu-menu:before {
   content: "";
-  background-color: #ffffff;
+  background-color: #f5f0ec;
   width: 13px;
   height: 13px;
   position: absolute;
@@ -25670,7 +25675,7 @@ a:visited {
     left: 0;
     z-index: 998;
     transform: translateY(-500px);
-    background-color: rgba(255, 255, 255, 0.8352941176);
+    background-color: rgba(245, 240, 236, 0.862745098);
     width: 100%;
     height: auto;
     border-radius: 0 0 20px 20px;
@@ -26052,4 +26057,34 @@ a:visited {
   .section-company p {
     font-size: 1.6rem;
   }
+}
+.section-projects {
+  width: 100%;
+  background-color: #f5f0ec;
+  position: relative;
+}
+.section-projects h1, .section-projects .h1 {
+  font-family: Montserrat;
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%; /* 55.2px */
+  letter-spacing: -1.44px;
+}
+.section-projects .btn-show-more {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #111;
+  border-radius: 200px;
+  border: 1px solid #111;
+  transition: transform 0.5s ease-in;
+  cursor: pointer;
+}
+.section-projects .gradient-background {
+  position: absolute;
+  bottom: 0;
+  height: 70%;
+  background-image: linear-gradient(360deg, #dcc1ab 0%, rgba(214, 183, 158, 0) 100%);
 }/*# sourceMappingURL=main.css.map */

@@ -13,6 +13,9 @@
 
     <link rel="stylesheet" href="./scss/main.css" />
 
+    <!-- Macy.js -->
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    <!-- Bootstrap -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     <script defer src="script.js"></script>
@@ -64,9 +67,11 @@
           <li class="nav-item main-nav-link">
             <a href="#company">O firmie</a>
           </li>
-          <li class="nav-item main-nav-link"><a href="#">Realizacje</a></li>
-          <li class="nav-item main-nav-link"><a href="#">Kontakt</a></li>
           <li class="nav-item main-nav-link">
+            <a href="#projects">Realizacje</a>
+          </li>
+          <li class="nav-item main-nav-link"><a href="#">Kontakt</a></li>
+          <li class="nav-item">
             <form
               class="d-flex form-search justify-content-center"
               role="search"
@@ -513,6 +518,56 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+
+    <section class="section-projects pt-120" id="projects">
+      <div class="container-fluid">
+        <div class="row pb-96">
+          <div
+            class="col ps-96 ps-lg-160 d-flex flex-column gap-16 align-items-start align-self-stretch"
+          >
+            <span class="subheading">Realizacje</span>
+            <h1>Nasze projekty</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="image-container-one p-0">
+            <img src="./assets/projects/Photo.png" alt="Image 0" />
+            <img src="./assets/projects/Photo (1).png" alt="Image 1" />
+            <img src="./assets/projects/Photo (2).png" alt="Image 2" />
+            <img src="./assets/projects/Photo (4).png" alt="Image 4" />
+            <img src="./assets/projects/Photo (5).png" alt="Image 5" />
+            <img src="./assets/projects/Photo (3).png" alt="Image 3" />
+            <img src="./assets/projects/Photo (7).png" alt="Image 7" />
+            <img src="./assets/projects/Photo (6).png" alt="Image 6" />
+            <img src="./assets/projects/Photo (8).png" alt="Image 8" />
+          </div>
+          <div class="image-container-two p-0">
+            <img src="./assets/projects/Photo.png" alt="Image 0" />
+            <img src="./assets/projects/Photo (1).png" alt="Image 1" />
+            <img src="./assets/projects/Photo (2).png" alt="Image 2" />
+            <img src="./assets/projects/Photo (4).png" alt="Image 4" />
+            <img src="./assets/projects/Photo (5).png" alt="Image 5" />
+            <img src="./assets/projects/Photo (3).png" alt="Image 3" />
+            <img src="./assets/projects/Photo (7).png" alt="Image 7" />
+            <img src="./assets/projects/Photo (6).png" alt="Image 6" />
+            <img src="./assets/projects/Photo (8).png" alt="Image 8" />
+          </div>
+
+          <div class="gradient-background"></div>
+          <div class="pt-5">
+            <button
+              class="btn btn-show-more d-flex px-22 pt-12 pb-14 align-items-center gap-8"
+              id="show-more-button"
+            >
+              <span>Rozwiń</span>
+              <img src="./assets/projects/Vector.svg" alt="Arrow_Down_Vector" />
+            </button>
           </div>
         </div>
       </div>
