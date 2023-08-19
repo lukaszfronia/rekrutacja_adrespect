@@ -186,14 +186,18 @@ imagesContainerOne.forEach((item, i) => {
   item.addEventListener("click", () => {
     changeSlide(i);
     popupWindow.classList.toggle("popup-open");
-    popupBackground.classList.remove("hidden");
+    setTimeout(() => {
+      popupBackground.classList.remove("hidden");
+    }, 1600);
   });
 });
 imagesContainerTwo.forEach((item, i) => {
   item.addEventListener("click", () => {
     changeSlide(i);
     popupWindow.classList.toggle("popup-open");
-    popupBackground.classList.remove("hidden");
+    setTimeout(() => {
+      popupBackground.classList.remove("hidden");
+    }, 1600);
   });
 });
 
@@ -206,7 +210,9 @@ const changeSlide = (i) => {
 
 closeBtn.addEventListener("click", () => {
   popupWindow.classList.toggle("popup-open");
-  popupBackground.classList.add("hidden");
+  setTimeout(() => {
+    popupBackground.classList.add("hidden");
+  }, 1000);
 });
 
 leftArrow.addEventListener("click", () => {
