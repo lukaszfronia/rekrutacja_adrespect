@@ -1,0 +1,398 @@
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@include media-breakpoint-down(xxl) {
+  //////////////////////// General \\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+  //////////////////////// Hero \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-hero {
+    h1 {
+      font-size: 5.2rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  //////////////////////// Contact \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-contact {
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  //////////////////////// General \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  html {
+    font-size: 56.25%;
+  }
+
+  .btn-main {
+    font-size: 1.2rem;
+  }
+  //////////////////////// Hero & Company \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-hero,
+  .section-company {
+    h1 {
+      font-size: 4.6rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  //////////////////////// Offer \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-offer {
+    h1 {
+      font-size: 3.8rem;
+    }
+    .card-offer {
+      h5 {
+        font-size: 2.6rem;
+      }
+    }
+  }
+
+  //////////////////////// Contact \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-contact {
+    h1 {
+      font-size: 2.6rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  //////////////////////// General \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  html {
+    font-size: 50%;
+  }
+
+  .subheading {
+    font-size: 1.4rem;
+  }
+
+  .btn-main {
+    font-size: 1.2rem;
+  }
+  .btn--primary {
+    padding: 10px 18px 12px 18px;
+  }
+  .btn--secondary {
+    padding: 10px 16px 12px 16px;
+  }
+
+  //////////////////////// Navigation \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .navbar {
+    .btn-mobile-nav {
+      display: block;
+      // position: fixed;
+      // right: 89px;
+      z-index: 9999;
+
+      & .line {
+        width: 28px;
+        height: 4px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 3px;
+        transition: all 0.5s ease-in;
+      }
+    }
+
+    .main-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 998;
+      transform: translateY(-500px);
+
+      background-color: #f5f0ecdc;
+
+      width: 100%;
+
+      height: auto;
+      border-radius: 0 0 20px 20px;
+
+      filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.234));
+      transition: all 1.2s linear;
+    }
+
+    .nav-open {
+      transform: translateY(0);
+    }
+    .arrow-down {
+      height: 15px;
+      width: 15px;
+    }
+
+    .navbar-nav {
+      font-size: 2.4rem;
+
+      .nav-item {
+        width: 50%;
+        text-align: center;
+
+        .submenu {
+          font-size: inherit;
+          position: static;
+          top: 5px;
+          left: 0;
+
+          &-item {
+            width: 100%;
+          }
+        }
+
+        .form-search {
+          .input-search {
+            &::placeholder {
+              font-size: 2rem;
+            }
+          }
+          .active {
+            border: 1px solid #bcbcbc;
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+
+  //////////////////////// Hero \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-hero,
+  .section-company {
+    h1 {
+      font-size: 4.8rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+
+  //////////////////////// Offer \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-offer {
+    h1 {
+      font-size: 4rem; //////// Zmieniec
+    }
+    .card-offer {
+      .card-offer-all {
+        h5 {
+          font-size: 2.4rem;
+        }
+        p {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+  //////////////////////// Projects \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-projects {
+    .gradient-background {
+      height: 75%;
+    }
+  }
+
+  //////////////////////// Contact \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-contact {
+    h1 {
+      font-size: 3.2rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+
+  //////////////////////// Footer \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .footer {
+    p,
+    ul {
+      font-size: 2rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  //////////////////////// General \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .btn-main {
+    font-size: 1.6rem;
+  }
+  .btn--primary {
+    padding: 12px 24px 14px 24px;
+  }
+  .btn--secondary {
+    padding: 12px 22px 14px 22px;
+  }
+
+  //////////////////////// Hero & Company \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-hero,
+  .section-company {
+    h1 {
+      font-size: 4.8rem;
+    }
+    p {
+      font-size: 1.8rem;
+    }
+  }
+
+  //////////////////////// Offer \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-offer {
+    h1 {
+      font-size: 4.4rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+    .card-offer {
+      h5 {
+        font-size: 2.8rem;
+      }
+
+      .card-icon {
+        &-eye {
+          width: 5.2rem;
+          height: 2.9rem;
+        }
+      }
+    }
+  }
+
+  //////////////////////// Projects \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-projects {
+    .popup {
+      width: 65rem;
+      .popup-btn {
+        transform: translateY(-50%) scale(1);
+      }
+      &-right-arrow {
+        right: 10px;
+      }
+      &-left-arrow {
+        left: 10px;
+      }
+    }
+  }
+
+  //////////////////////// Contact \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-contact {
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  //////////////////////// Footer \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .footer {
+    p,
+    ul {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  //////////////////////// General \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .btn-main {
+    font-size: 1.6rem;
+  }
+  .subheading {
+    font-size: 1.2rem;
+  }
+
+  //////////////////////// Navigation \\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+  //////////////////////// Hero & Company \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-hero,
+  .section-company {
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.8rem;
+    }
+  }
+
+  //////////////////////// Offer \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-offer {
+    .card-offer {
+      .card-offer-all {
+        h5 {
+          font-size: 2.4rem;
+        }
+        p {
+          font-size: 1.4rem;
+        }
+
+        .card-icon {
+          &-stars {
+            width: 3.4rem;
+            height: 3.4rem;
+          }
+          &-eye {
+            width: 3.8rem;
+            height: 1.9rem;
+          }
+
+          &-pen {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+      }
+    }
+
+    h1 {
+      font-size: 2.9rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  //////////////////////// Projects \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-projects {
+    h1 {
+      font-size: 2.9rem;
+    }
+    .popup {
+      width: 47rem;
+
+      .popup-btn {
+        transform: translateY(-50%) scale(0.8);
+      }
+      &-right-arrow {
+        right: 5px;
+      }
+      &-left-arrow {
+        left: 5px;
+      }
+    }
+
+    .gradient-background {
+      height: 90%;
+    }
+  }
+
+  //////////////////////// Contact \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-contact {
+    h1 {
+      font-size: 2.2rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  //////////////////////// Footer \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .footer {
+    p,
+    ul {
+      font-size: 1.6rem;
+    }
+  }
+}

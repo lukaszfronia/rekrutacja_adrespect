@@ -1,0 +1,90 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+///////////////////////////////// Colors \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+$black: #111;
+
+$custom-colors: (
+  "beige": #dcc1ab,
+  "green": #1b5b31,
+  "gray": #f5f0ec,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+//////////////////////////////// Sizing \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  3: $spacer * 0.3,
+  //3px
+  5: $spacer * 0.5,
+  //5px
+  8: $spacer * 0.8,
+  //8px
+  10: $spacer * 1,
+  //8px
+  12: $spacer * 1.2,
+  //12px
+  14: $spacer * 1.4,
+  //14px
+  16: $spacer * 1.6,
+  //16px
+  18: $spacer * 1.8,
+  //18px
+  22: $spacer * 2.2,
+  //22px
+  24: $spacer * 2.4,
+  // 24px
+  32: $spacer * 3.2,
+  // 32px
+  36: $spacer * 3.6,
+  // 36px
+  40: $spacer * 4,
+  // 40px
+  44: $spacer * 4.4,
+  // 44px
+  47: $spacer * 4.7,
+  // 47px
+  48: $spacer * 4.8,
+  // 48px
+  60: $spacer * 6,
+  // 60px
+  62: $spacer * 6.2,
+  // 62px
+  64: $spacer * 6.4,
+  // 64px
+  66: $spacer * 6.6,
+  // 66px
+  72: $spacer * 7.2,
+  // 72px
+  80: $spacer * 8,
+  // 80px
+  88: $spacer * 8.8,
+  //88px
+  89: $spacer * 8.9,
+  //89px
+  96: $spacer * 9.6,
+  //96px
+  110: $spacer * 11,
+  //110px
+  120: $spacer * 12,
+  //120px
+  135: $spacer * 13.5,
+  //120px
+  160: $spacer * 16,
+  //160px
+  200: $spacer * 20,
+  //200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px,
+);
+
+///////////////////////////////// Borders \\\\\\\\\\\\\\\\\\\\\\\\\\
+$border-radius: 20rem;

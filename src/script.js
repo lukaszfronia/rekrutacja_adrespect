@@ -6,7 +6,7 @@ const btnNav = document.querySelector(".btn-mobile-nav");
 const navbar = document.querySelector(".navbar-nav");
 const arrowDown = document.querySelector(".arrow-down");
 const openSubMenu = document.querySelector(".open-submenu");
-const subMenu = document.querySelector(".submenu-menu");
+const subMenu = document.querySelector(".submenu");
 
 const btnSearch = document.querySelector(".btn-search");
 const inputSearch = document.querySelector(".input-search");
@@ -17,6 +17,26 @@ const btnsMainNav = document.querySelectorAll(".nav-item");
 const navbarHeader = document.querySelector(".navbar-header");
 const navHeight = navbarHeader.getBoundingClientRect().height;
 const sectionHero = document.querySelector(".section-hero");
+
+const showMoreButton = document.querySelector(".btn-show-more");
+const imageContainerOne = document.querySelector(".image-container-one");
+const imageContainerTwo = document.querySelector(".image-container-two");
+const gradientBackground = document.querySelector(".gradient-background");
+
+const imagesContainerOne = [...imageContainerOne.querySelectorAll("img")];
+const imagesContainerTwo = [...imageContainerTwo.querySelectorAll("img")];
+
+const popupWindow = document.querySelector(".popup");
+const closeBtn = document.querySelector(".close-btn");
+
+const slideImg = document.querySelector(".slide-image");
+
+const leftArrow = document.querySelector(".popup-left-arrow");
+const rightArrow = document.querySelector(".popup-right-arrow");
+
+const popupBackground = document.querySelector(".popup-background");
+
+let currentSlide = 0;
 ///////////////////// Functions \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 const opnClsMenu = () => {
@@ -47,6 +67,25 @@ const getHref = (btn) => {
     const sectionEl = document.querySelector(href);
     sectionEl.scrollIntoView({ behavior: "smooth" });
   }
+};
+
+const slideDirection = (direction) => {
+  if (direction === "left") {
+    currentSlide > 0
+      ? changeSlide(currentSlide - 1)
+      : changeSlide(imagesContainerOne.length - 1);
+  } else {
+    currentSlide < imagesContainerOne.length - 1
+      ? changeSlide(currentSlide + 1)
+      : changeSlide(0);
+  }
+};
+
+const changeSlide = (i) => {
+  let imgPath = `./assets/projects/Photo_${i}.png`;
+  slideImg.src = imgPath;
+
+  currentSlide = i;
 };
 
 //////////// Navigation  \\\\\\\\\\\\\\\\
@@ -109,7 +148,7 @@ const observer = new IntersectionObserver((entries) => {
 }, options);
 
 observer.observe(sectionHero);
-//////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////////////////////// Projects \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 var macyInstance = Macy({
   container: ".image-container-one",
   mobileFirst: true,
@@ -140,14 +179,6 @@ var macyInstance = Macy({
 
 //////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-const showMoreButton = document.querySelector(".btn-show-more");
-const imageContainerOne = document.querySelector(".image-container-one");
-const imageContainerTwo = document.querySelector(".image-container-two");
-const gradientBackground = document.querySelector(".gradient-background");
-
-const imagesContainerOne = [...imageContainerOne.querySelectorAll("img")];
-const imagesContainerTwo = [...imageContainerTwo.querySelectorAll("img")];
-
 showMoreButton.addEventListener("click", () => {
   imageContainerTwo.classList.toggle("hidden");
 
@@ -170,18 +201,6 @@ setTimeout(() => {
 
 //////////////////////////////// Popup with images gallery \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-const popupWindow = document.querySelector(".popup");
-const closeBtn = document.querySelector(".close-btn");
-
-const slideImg = document.querySelector(".slide-image");
-
-const leftArrow = document.querySelector(".popup-left-arrow");
-const rightArrow = document.querySelector(".popup-right-arrow");
-
-const popupBackground = document.querySelector(".popup-background");
-
-let currentSlide = 0;
-
 imagesContainerOne.forEach((item, i) => {
   item.addEventListener("click", () => {
     changeSlide(i);
@@ -191,6 +210,7 @@ imagesContainerOne.forEach((item, i) => {
     }, 1600);
   });
 });
+
 imagesContainerTwo.forEach((item, i) => {
   item.addEventListener("click", () => {
     changeSlide(i);
@@ -201,13 +221,6 @@ imagesContainerTwo.forEach((item, i) => {
   });
 });
 
-const changeSlide = (i) => {
-  let imgPath = `./assets/projects/Photo_${i}.png`;
-  slideImg.src = imgPath;
-
-  currentSlide = i;
-};
-
 closeBtn.addEventListener("click", () => {
   popupWindow.classList.toggle("popup-open");
   setTimeout(() => {
@@ -215,14 +228,6 @@ closeBtn.addEventListener("click", () => {
   }, 1000);
 });
 
-leftArrow.addEventListener("click", () => {
-  currentSlide > 0
-    ? changeSlide(currentSlide - 1)
-    : changeSlide(imagesContainerOne.length - 1);
-});
+leftArrow.addEventListener("click", slideDirection.bind(this, "left"));
 
-rightArrow.addEventListener("click", () => {
-  currentSlide < imagesContainerOne.length - 1
-    ? changeSlide(currentSlide + 1)
-    : changeSlide(0);
-});
+rightArrow.addEventListener("click", slideDirection.bind(this, "right"));
