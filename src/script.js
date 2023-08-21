@@ -17,6 +17,9 @@ const btnsMainNav = document.querySelectorAll(".nav-item");
 const navbarHeader = document.querySelector(".navbar-header");
 const navHeight = navbarHeader.getBoundingClientRect().height;
 const sectionHero = document.querySelector(".section-hero");
+const cardOne = document.querySelector(".card-one");
+const cardTwo = document.querySelector(".card-two");
+const cardThree = document.querySelector(".card-three");
 
 const showMoreButton = document.querySelector(".btn-show-more");
 const imageContainerOne = document.querySelector(".image-container-one");
@@ -133,21 +136,6 @@ btnSearch.addEventListener("click", () => {
   inputSearch.classList.toggle("active");
 });
 
-const options = {
-  root: null,
-  threshold: 0,
-  rootMargin: `-${navHeight}px`,
-};
-
-const observer = new IntersectionObserver((entries) => {
-  const [entry] = entries;
-
-  !entry.isIntersecting
-    ? navbarHeader.classList.add("sticky")
-    : navbarHeader.classList.remove("sticky");
-}, options);
-
-observer.observe(sectionHero);
 ////////////////////////////////////////// Projects \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 var macyInstance = Macy({
   container: ".image-container-one",
@@ -183,12 +171,13 @@ showMoreButton.addEventListener("click", () => {
   imageContainerTwo.classList.toggle("hidden");
 
   gradientBackground.classList.toggle("hidden");
-  showMoreButton.style.bottom = "5px";
 
   showMoreButton.childNodes[1].textContent = "Zwiń";
   showMoreButton.childNodes[3].style.transform = "rotate(180deg)";
+  showMoreButton.style.bottom = "10px";
 
   if (!gradientBackground.classList.contains("hidden")) {
+    showMoreButton.style.bottom = "5%";
     showMoreButton.childNodes[1].textContent = "Rozwiń";
     showMoreButton.childNodes[3].style.transform = "rotate(0deg)";
   }
@@ -230,3 +219,35 @@ closeBtn.addEventListener("click", () => {
 leftArrow.addEventListener("click", slideDirection.bind(this, "left"));
 
 rightArrow.addEventListener("click", slideDirection.bind(this, "right"));
+
+////////////////////////////////// Aniamtions \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+const options = {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+};
+
+const observerHero = new IntersectionObserver((entries) => {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) {
+    navbarHeader.classList.add("sticky");
+
+    cardOne.classList.add("fade-in");
+    cardOne.style.opacity = "1";
+
+    setTimeout(() => {
+      cardTwo.classList.add("fade-in");
+      cardTwo.style.opacity = "1";
+    }, 200);
+    setTimeout(() => {
+      cardThree.classList.add("fade-in");
+      cardThree.style.opacity = "1";
+    }, 500);
+  } else {
+    navbarHeader.classList.remove("sticky");
+  }
+}, options);
+
+observerHero.observe(sectionHero);

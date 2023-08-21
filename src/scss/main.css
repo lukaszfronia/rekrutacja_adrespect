@@ -35,6 +35,10 @@ ul li {
   cursor: pointer;
 }
 
+.container-xxl {
+  overflow: hidden;
+}
+
 .normal {
   font-style: normal;
   font-weight: 400;
@@ -96,7 +100,7 @@ a:visited {
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: inherit;
   z-index: 993;
   background-color: #ffffff;
 }
@@ -120,6 +124,21 @@ a:visited {
   touch-action: none;
 }
 
+.fade-in {
+  animation: fadeIn ease 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.navbar-header {
+  max-width: 144rem;
+}
 .navbar-header .btn-mobile-nav {
   display: none;
   border: none;
@@ -202,7 +221,7 @@ a:visited {
   font-size: 1.6rem;
 }
 .section-hero .right-side {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../../assets/hero/5005cc8dea4835ae282958a4c13cc9c0.png"), lightgray 50%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../../assets/hero/5005cc8dea4835ae282958a4c13cc9c0.jpg"), lightgray 50%;
   background-repeat: no-repeat;
   padding: 64.1rem 49.6rem 0px 0px;
   background-size: 100% 100%;
@@ -223,6 +242,7 @@ a:visited {
   line-height: 115% !important;
 }
 .section-offer .card-offer {
+  opacity: 0;
   border-radius: 20px;
   position: relative;
   overflow: hidden;

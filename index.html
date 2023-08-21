@@ -27,8 +27,10 @@
   <body>
     <div class="container-xxl p-0">
       <!-- Navigation -->
-      <nav class="navbar-header py-24 text-black px-44 px-sm-64 px-md-89">
-        <div class="container-fluid p-0 d-flex justify-content-between">
+      <nav class="navbar-header py-24 text-black">
+        <div
+          class="container-fluid p-0 d-flex justify-content-between px-44 px-sm-64 px-md-89"
+        >
           <a href="#" class="navbar-brand">
             <img src="./assets/menu/giarddesign.svg" alt="Logo giarddesign"
           /></a>
@@ -165,7 +167,9 @@
                 <div
                   class="col p-0 d-flex justify-content-end ps-36 ps-sm-54 ps-md-0"
                 >
-                  <div class="row right-side"></div>
+                  <div
+                    class="row right-side d-flex flex-column justify-content-between-end align-items-center flex-shrink-0"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -323,7 +327,7 @@
 
       <section class="section-offer pt-120 pb-160 text-black" id="oferta">
         <div class="container-fluid">
-          <div class="row mb-96">
+          <div class="row mb-96 section-offer-top-box">
             <div class="col px-89 px-md-200 d-flex flex-column">
               <span class="subheading pb-16 text-green normal">Oferta</span>
               <div class="row">
@@ -349,7 +353,7 @@
             >
               <!-- Card 1 -->
               <div class="d-flex">
-                <div class="card-offer px-40 py-48 bg-white">
+                <div class="card-offer px-40 py-48 bg-white card-one">
                   <div class="card-offer-all">
                     <img
                       src="./assets/offer/pen.png"
@@ -383,7 +387,7 @@
 
               <div class="d-flex">
                 <div
-                  class="card-offer px-40 py-48 bg-white"
+                  class="card-offer px-40 py-48 bg-white card-two"
                   style="max-width: 37.8rem"
                 >
                   <div class="card-offer-all">
@@ -395,7 +399,7 @@
                     <div
                       class="card-offer-body pt-36 d-flex flex-column align-items-start"
                     >
-                      <h5 class="pb-12 m-0">Wizualizacje</h5>
+                      <h5 class="pb-24 m-0">Wizualizacje</h5>
                       <p class="pb-64 m-0 inter-body-small d-flex flex-column">
                         <span> Przedstawimy Ci projekty koncepcyjne </span>
                         <span> w postaci wirtualnego spaceru animowanego</span>
@@ -420,7 +424,7 @@
                 <!-- Card 3 -->
 
                 <div
-                  class="card-offer px-40 py-48 bg-white"
+                  class="card-offer px-40 py-48 bg-white card-three"
                   style="max-width: 37.8rem"
                 >
                   <div class="card-offer-all">
@@ -660,14 +664,18 @@
                 <span class="italic">Instagramie</span>.
               </h1>
               <div>
-                <p class="inter-body">
-                  Śledź nasze <br />najnowsze realizacje!
-                </p>
-                <button
-                  class="btn-main btn--primary bg-gray text-green rounded d-flex align-items-center btn-instagram"
-                >
-                  <span class="normal"> Instagram </span>
-                </button>
+                <div class="d-flex flex-column gap-24">
+                  <p class="inter-body">
+                    Śledź nasze <br />najnowsze realizacje!
+                  </p>
+                  <div>
+                    <button
+                      class="btn-main btn--primary bg-gray text-green rounded d-flex align-items-center btn-instagram"
+                    >
+                      <span class="normal"> Instagram </span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
