@@ -183,13 +183,12 @@ showMoreButton.addEventListener("click", () => {
   imageContainerTwo.classList.toggle("hidden");
 
   gradientBackground.classList.toggle("hidden");
-  showMoreButton.style.bottom = "0";
+  showMoreButton.style.bottom = "5px";
 
   showMoreButton.childNodes[1].textContent = "Zwiń";
   showMoreButton.childNodes[3].style.transform = "rotate(180deg)";
 
   if (!gradientBackground.classList.contains("hidden")) {
-    showMoreButton.style.bottom = "5%";
     showMoreButton.childNodes[1].textContent = "Rozwiń";
     showMoreButton.childNodes[3].style.transform = "rotate(0deg)";
   }

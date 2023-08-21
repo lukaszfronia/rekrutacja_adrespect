@@ -3,13 +3,36 @@
 @include media-breakpoint-down(xxl) {
   //////////////////////// General \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+  .btn-main {
+    span {
+      font-size: 1.3rem;
+    }
+  }
   //////////////////////// Hero \\\\\\\\\\\\\\\\\\\\\\\\\\\
   .section-hero {
     h1 {
       font-size: 5.2rem;
     }
     p {
-      font-size: 1.2rem;
+      font-size: 1.45rem;
+    }
+  }
+
+  //////////////////////// Offer \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-offer {
+    h1 {
+      font-size: 4.4rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+    .card-offer {
+      h5 {
+        font-size: 2.4rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
     }
   }
 
@@ -31,7 +54,9 @@
   }
 
   .btn-main {
-    font-size: 1.2rem;
+    span {
+      font-size: 1.3rem !important;
+    }
   }
   //////////////////////// Hero & Company \\\\\\\\\\\\\\\\\\\\\\\\\\\
   .section-hero,
@@ -40,7 +65,7 @@
       font-size: 4.6rem;
     }
     p {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -49,10 +74,23 @@
     h1 {
       font-size: 3.8rem;
     }
+    p {
+      font-size: 1.5rem;
+    }
     .card-offer {
       h5 {
         font-size: 2.6rem;
       }
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  //////////////////////// Projects \\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+  .section-projects {
+    h1 {
+      font-size: 3.8rem;
     }
   }
 
@@ -65,6 +103,22 @@
       font-size: 1.2rem;
     }
   }
+
+  //////////////////////// Footer \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .footer {
+    p,
+    ul {
+      font-size: 1.3rem;
+    }
+
+    span {
+      font-size: 1.2rem;
+    }
+    img {
+      width: 10rem;
+      height: 2rem;
+    }
+  }
 }
 
 @include media-breakpoint-down(lg) {
@@ -74,21 +128,28 @@
   }
 
   .subheading {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .btn-main {
-    font-size: 1.2rem;
+    span {
+      font-size: 1.2rem;
+    }
   }
   .btn--primary {
-    padding: 10px 18px 12px 18px;
+    padding: 10px 14px 12px 14px;
   }
   .btn--secondary {
-    padding: 10px 16px 12px 16px;
+    padding: 10px 12px 12px 12px;
+  }
+
+  .vector-arrow {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 
   //////////////////////// Navigation \\\\\\\\\\\\\\\\\\\\\\\\\\\
-  .navbar {
+  .navbar-header {
     .btn-mobile-nav {
       display: block;
       // position: fixed;
@@ -111,7 +172,7 @@
       z-index: 998;
       transform: translateY(-500px);
 
-      background-color: #f5f0ecdc;
+      background-color: #ffffff;
 
       width: 100%;
 
@@ -134,7 +195,7 @@
       font-size: 2.4rem;
 
       .nav-item {
-        width: 50%;
+        width: 60%;
         text-align: center;
 
         .submenu {
@@ -151,7 +212,7 @@
         .form-search {
           .input-search {
             &::placeholder {
-              font-size: 2rem;
+              font-size: 1.6rem;
             }
           }
           .active {
@@ -163,35 +224,48 @@
     }
   }
 
-  //////////////////////// Hero \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  //////////////////////// Hero & Company \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-hero {
+    .right-side {
+      padding: 48.1rem 39.6rem 0px 0px;
+    }
+  }
+  .section-company {
+    .left-side {
+      padding: 48.1rem 0px 0px 0px;
+    }
+  }
   .section-hero,
   .section-company {
     h1 {
-      font-size: 4.8rem;
+      font-size: 4.1rem;
     }
     p {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
     }
   }
 
   //////////////////////// Offer \\\\\\\\\\\\\\\\\\\\\\\\\\\
   .section-offer {
     h1 {
-      font-size: 4rem; //////// Zmieniec
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.2rem;
     }
     .card-offer {
       .card-offer-all {
         h5 {
           font-size: 2.4rem;
         }
-        p {
-          font-size: 1.6rem;
-        }
       }
     }
   }
   //////////////////////// Projects \\\\\\\\\\\\\\\\\\\\\\\\\\\
   .section-projects {
+    h1 {
+      font-size: 3rem;
+    }
     .gradient-background {
       height: 75%;
     }
@@ -211,7 +285,20 @@
   .footer {
     p,
     ul {
-      font-size: 2rem;
+      font-size: 1.6rem;
+    }
+
+    .btn-main {
+      span {
+        font-size: 1.2rem;
+      }
+    }
+    span {
+      font-size: 1rem;
+    }
+    img {
+      width: 10rem;
+      height: 2rem;
     }
   }
 }
@@ -219,30 +306,49 @@
 @include media-breakpoint-down(md) {
   //////////////////////// General \\\\\\\\\\\\\\\\\\\\\\\\\\\
   .btn-main {
-    font-size: 1.6rem;
+    span {
+      font-size: 1.4rem !important;
+    }
   }
   .btn--primary {
-    padding: 12px 24px 14px 24px;
+    padding: 8px 14px 10px 14px;
   }
   .btn--secondary {
-    padding: 12px 22px 14px 22px;
+    padding: 8px 12px 10px 12px;
+  }
+
+  //////////////////////// Navigation \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .navbar-header {
+    span {
+      font-size: 2rem;
+    }
   }
 
   //////////////////////// Hero & Company \\\\\\\\\\\\\\\\\\\\\\\\\\\
+  .section-hero {
+    .right-side {
+      padding: 58.1rem 39.6rem 0px 0px;
+    }
+  }
+  .section-company {
+    .left-side {
+      padding: 58.1rem 0px 0px 0px;
+    }
+  }
   .section-hero,
   .section-company {
     h1 {
       font-size: 4.8rem;
     }
     p {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
   }
 
   //////////////////////// Offer \\\\\\\\\\\\\\\\\\\\\\\\\\\
   .section-offer {
     h1 {
-      font-size: 4.4rem;
+      font-size: 3.8rem;
     }
     p {
       font-size: 1.6rem;
@@ -263,6 +369,9 @@
 
   //////////////////////// Projects \\\\\\\\\\\\\\\\\\\\\\\\\\\
   .section-projects {
+    h1 {
+      font-size: 3.8rem;
+    }
     .popup {
       width: 65rem;
       .popup-btn {
@@ -287,33 +396,44 @@
     }
   }
   //////////////////////// Footer \\\\\\\\\\\\\\\\\\\\\\\\\\\
-  .footer {
-    p,
-    ul {
-      font-size: 1.8rem;
-    }
-  }
 }
 
 @include media-breakpoint-down(sm) {
   //////////////////////// General \\\\\\\\\\\\\\\\\\\\\\\\\\\
   .btn-main {
-    font-size: 1.6rem;
+    span {
+      font-size: 1.2rem !important;
+    }
   }
   .subheading {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   //////////////////////// Navigation \\\\\\\\\\\\\\\\\\\\\\\\\\\
-
+  .navbar-header {
+    .btn-mobile-nav {
+      transform: scale(0.8);
+    }
+  }
   //////////////////////// Hero & Company \\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+  .section-hero {
+    .right-side {
+      padding: 48.1rem 39.6rem 0px 0px;
+    }
+  }
+  .section-company {
+    .left-side {
+      padding: 48.1rem 0px 0px 0px;
+    }
+  }
   .section-hero,
   .section-company {
     h1 {
-      font-size: 4rem;
+      font-size: 3.6rem;
     }
     p {
-      font-size: 1.8rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -322,10 +442,10 @@
     .card-offer {
       .card-offer-all {
         h5 {
-          font-size: 2.4rem;
+          font-size: 2.2rem;
         }
         p {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
         }
 
         .card-icon {
@@ -350,7 +470,7 @@
       font-size: 2.9rem;
     }
     p {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -381,7 +501,7 @@
   //////////////////////// Contact \\\\\\\\\\\\\\\\\\\\\\\\\\\
   .section-contact {
     h1 {
-      font-size: 2.2rem;
+      font-size: 2.25rem;
     }
     p {
       font-size: 1.4rem;
@@ -392,7 +512,7 @@
   .footer {
     p,
     ul {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
   }
 }

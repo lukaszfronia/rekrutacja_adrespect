@@ -13,15 +13,13 @@
     }
   }
 
-  .vector-arrow-right {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-
-  .right-side {
-    .img-slider {
-      width: 100%;
-      height: 100%;
-    }
+  .left-side {
+    background: url("../../assets/about_company/Photo_company.png"),
+      lightgray -212.132px 0px / 157.015% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 68.1rem 0px 0px 0px;
+    width: 100%;
+    height: 100%;
   }
 }

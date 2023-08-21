@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/scss/main.css" />
+
+    <!-- Macy.js -->
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    <!-- Bootstrap -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script defer src="./src/script.js"></script>
+
+    <title>Giarddesign</title>
+  </head>
+  <body>
+    <div class="container-xxl p-0">
+      <!-- Navigation -->
+      <nav class="navbar-header py-24 text-black px-44 px-sm-64 px-md-89">
+        <div class="container-fluid p-0 d-flex justify-content-between">
+          <a href="#" class="navbar-brand">
+            <img src="./assets/menu/giarddesign.svg" alt="Logo giarddesign"
+          /></a>
+          <ul
+            class="navbar-nav normal inter-body-small flex-lg-row flex-column align-items-center py-80 p-lg-0 ms-lg-auto gap-lg-48 gap-5 main-nav"
+          >
+            <li class="nav-item">
+              <a role="button" tabindex="0">
+                <div
+                  class="d-flex gap-5 align-items-center justify-content-center open-submenu"
+                >
+                  <span class="normal">Oferta</span>
+                  <img
+                    src="./assets/menu/Icon.svg"
+                    alt="arrow"
+                    class="arrow-down"
+                  />
+                </div>
+              </a>
+              <ul class="submenu p-12 hidden">
+                <li class="submenu-item main-nav-link p-5">
+                  <a href="#oferta"> <span class="normal">Oferta 1</span></a>
+                </li>
+                <li class="submenu-item main-nav-link p-5">
+                  <a href="#oferta"> <span class="normal">Oferta 2</span></a>
+                </li>
+                <li class="submenu-item main-nav-link p-5">
+                  <a href="#oferta"> <span class="normal">Oferta 3</span></a>
+                </li>
+                <li class="submenu-item main-nav-link p-5">
+                  <a href="#oferta"> <span class="normal">Oferta 3</span></a>
+                </li>
+                <li class="submenu-item main-nav-link p-5">
+                  <a href="#oferta"> <span class="normal">Oferta 5</span></a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item main-nav-link">
+              <a href="#company"> <span class="normal">O firmie</span></a>
+            </li>
+            <li class="nav-item main-nav-link">
+              <a href="#projects"> <span class="normal">Realizacje</span></a>
+            </li>
+            <li class="nav-item main-nav-link">
+              <a href="#contact"> <span class="normal">Kontakt</span></a>
+            </li>
+            <li class="nav-item">
+              <form
+                class="d-flex form-search gap-5 justify-content-center"
+                role="search"
+              >
+                <input
+                  class="input-search"
+                  type="search"
+                  placeholder="Wyszukaj"
+                />
+                <button class="btn-main btn-search" type="submit">
+                  <img src="./assets/menu/Icon 01.svg" alt="search icon" />
+                </button>
+              </form>
+            </li>
+          </ul>
+
+          <button class="btn-mobile-nav d-flex flex-column gap-5" type="menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+
+      <section
+        id="carouselExample"
+        class="carousel slide text-black section-hero bg-beige"
+      >
+        <div class="carousel-inner">
+          <!-- Slide - 1 -->
+          <div class="carousel-item active">
+            <div class="container-fluid p-0">
+              <div
+                class="row d-flex flex-column flex-md-row gap-48 gap-sm-64 m-0 p-0"
+              >
+                <div
+                  class="col d-flex flex-column justify-content-center p-0 m-0"
+                >
+                  <div class="row m-0 ps-44 ps-sm-64 ps-md-89">
+                    <div class="col d-flex flex-column p-0">
+                      <h1 class="m-0 pb-36 pb-sm-44 m-0">
+                        Nowoczesna <br />
+                        aranżacja <br />Twojego ogrodu
+                      </h1>
+
+                      <p
+                        class="pb-54 pb-sm-72 m-0 d-flex flex-column pe-44 pe-sm-120 pe-md-0"
+                      >
+                        Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                        estetyka realizacji. Oferujemy kompleksowy zakres usług
+                        z indywidualnym podejściem do każdego projektu.
+                      </p>
+
+                      <div
+                        class="d-flex flex-column flex-sm-row align-items-start gap-24 gap-lg-36"
+                      >
+                        <button
+                          type="button"
+                          class="btn-main rounded btn--primary bg-green text-gray d-flex align-items-center"
+                        >
+                          <span class="normal inter-body">
+                            Skontaktuj się z nami
+                          </span>
+                        </button>
+
+                        <button
+                          type="button"
+                          class="btn-main rounded btn--secondary text-green border border-1 border-green d-flex align-items-center gap-8"
+                        >
+                          <span class="normal inter-body">
+                            Zobacz nasze realizacje
+                          </span>
+                          <img
+                            class="vector-arrow"
+                            src="./assets/hero/Vector.svg"
+                            alt="Arrow down - Vector"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="col p-0 d-flex justify-content-end ps-36 ps-sm-54 ps-md-0"
+                >
+                  <div class="row right-side"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide - 2 -->
+          <div class="carousel-item">
+            <div class="container-fluid p-0">
+              <div
+                class="row d-flex flex-column flex-md-row gap-48 gap-sm-64 m-0 p-0"
+              >
+                <div
+                  class="col d-flex flex-column justify-content-center p-0 m-0"
+                >
+                  <div class="row m-0 ps-44 ps-sm-64 ps-md-89">
+                    <div class="col d-flex flex-column p-0">
+                      <h1 class="m-0 pb-36 pb-sm-44 m-0">
+                        Nowoczesna <br />
+                        aranżacja <br />Twojego ogrodu
+                      </h1>
+
+                      <p
+                        class="pb-54 pb-sm-72 m-0 d-flex flex-column pe-44 pe-sm-120 pe-md-0"
+                      >
+                        Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                        estetyka realizacji. Oferujemy kompleksowy zakres usług
+                        z indywidualnym podejściem do każdego projektu.
+                      </p>
+
+                      <div
+                        class="d-flex flex-column flex-sm-row align-items-start gap-24 gap-lg-36"
+                      >
+                        <button
+                          type="button"
+                          class="btn-main rounded btn--primary bg-green text-gray d-flex align-items-center"
+                        >
+                          <span class="normal inter-body">
+                            Skontaktuj się z nami
+                          </span>
+                        </button>
+
+                        <button
+                          type="button"
+                          class="btn-main rounded btn--secondary text-green border border-1 border-green d-flex align-items-center gap-8"
+                        >
+                          <span class="normal inter-body">
+                            Zobacz nasze realizacje
+                          </span>
+                          <img
+                            class="vector-arrow"
+                            src="./assets/hero/Vector.svg"
+                            alt="Arrow down - Vector"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="col p-0 d-flex justify-content-end flex-shrink-0 ps-44 ps-64 ps-md-0"
+                >
+                  <div class="row right-side"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide - 3-->
+          <div class="carousel-item">
+            <div class="container-fluid p-0">
+              <div
+                class="row d-flex flex-column flex-md-row gap-48 gap-sm-64 m-0 p-0"
+              >
+                <div
+                  class="col d-flex flex-column justify-content-center p-0 m-0"
+                >
+                  <div class="row m-0 ps-44 ps-sm-64 ps-md-89">
+                    <div class="col d-flex flex-column p-0">
+                      <h1 class="m-0 pb-36 pb-sm-44 m-0">
+                        Nowoczesna <br />
+                        aranżacja <br />Twojego ogrodu
+                      </h1>
+
+                      <p
+                        class="pb-54 pb-sm-72 m-0 d-flex flex-column pe-44 pe-sm-120 pe-md-0"
+                      >
+                        Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                        estetyka realizacji. Oferujemy kompleksowy zakres usług
+                        z indywidualnym podejściem do każdego projektu.
+                      </p>
+
+                      <div
+                        class="d-flex flex-column flex-sm-row align-items-start gap-24 gap-lg-36"
+                      >
+                        <button
+                          type="button"
+                          class="btn-main rounded btn--primary bg-green text-gray d-flex align-items-center"
+                        >
+                          <span class="normal inter-body">
+                            Skontaktuj się z nami
+                          </span>
+                        </button>
+
+                        <button
+                          type="button"
+                          class="btn-main rounded btn--secondary text-green border border-1 border-green d-flex align-items-center gap-8"
+                        >
+                          <span class="normal inter-body">
+                            Zobacz nasze realizacje
+                          </span>
+                          <img
+                            class="vector-arrow"
+                            src="./assets/hero/Vector.svg"
+                            alt="Arrow down - Vector"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="col p-0 d-flex justify-content-end flex-shrink-0 ps-44 ps-64 ps-md-0"
+                >
+                  <div class="row right-side"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="btns-slider bg-gray d-flex py-18 px-22 py-sm-24 px-sm-32 align-items-start gap-32"
+        >
+          <button
+            class="btn-slider"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <img src="./assets/hero/Arrow_Left.svg" alt="Arrow Right Slider" />
+          </button>
+          <button
+            class="btn-slider"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <img src="./assets/hero/Arrow_Right.svg" alt="Arrow Right Slider" />
+          </button>
+        </div>
+      </section>
+
+      <!-- Offer -->
+
+      <section class="section-offer pt-120 pb-160 text-black" id="oferta">
+        <div class="container-fluid">
+          <div class="row mb-96">
+            <div class="col px-89 px-md-200 d-flex flex-column">
+              <span class="subheading pb-16 text-green normal">Oferta</span>
+              <div class="row">
+                <div class="col col-sm-10 col-xxl-8 p-0">
+                  <h1 class="pb-32 m-0">
+                    Działamy <span class="italic">kompleksowo</span>
+                  </h1>
+                  <p class="inter-body">
+                    Oferujemy kompletną obsługę inwestycji terenów zielonych.
+                    Projektujemy nowoczesne ogrody przydomowe oraz
+                    rezydencjonalne. Stworzymy dla Ciebie projekt,
+                    zwizualizujemy go i wcielimy w życie, a na każdym etapie
+                    posłużymy radą i wieloletnim doświadczeniem.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div
+              class="col d-flex flex-column flex-md-row align-items-start justify-content-md-center gap-64 align-items-start flex-wrap px-44 px-md-64 px-lg-88"
+            >
+              <!-- Card 1 -->
+              <div class="d-flex">
+                <div class="card-offer px-40 py-48 bg-white">
+                  <div class="card-offer-all">
+                    <img
+                      src="./assets/offer/pen.png"
+                      class="card-icon-pen"
+                      alt="Pen Icon"
+                    />
+                    <div
+                      class="card-offer-body pt-36 d-flex flex-column align-items-start"
+                    >
+                      <h5 class="pb-12 m-0">Projekty</h5>
+                      <p class="pb-64 m-0 inter-body-small d-flex flex-column">
+                        <span> Zaprojektujemy Twój ogród w nowoczesnym </span>
+                        <span> stylu i z najlepszym wykorzystaniem</span>
+                        <span> istniejącej przestrzeni. </span>
+                      </p>
+                      <a
+                        href="#"
+                        class="btn-main text-green border-bottom border-green p-0 d-flex align-items-center gap-10 pb-4"
+                        ><span class="normal">Dowiedz się więcej</span>
+                        <img
+                          src="./assets/offer/Arrow_Right_Vector.svg"
+                          alt="Arrow Right Vector"
+                          class="vector-arrow"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+
+              <div class="d-flex">
+                <div
+                  class="card-offer px-40 py-48 bg-white"
+                  style="max-width: 37.8rem"
+                >
+                  <div class="card-offer-all">
+                    <img
+                      src="./assets/offer/eye.png"
+                      class="card-icon-eye"
+                      alt="Eye Icon"
+                    />
+                    <div
+                      class="card-offer-body pt-36 d-flex flex-column align-items-start"
+                    >
+                      <h5 class="pb-12 m-0">Wizualizacje</h5>
+                      <p class="pb-64 m-0 inter-body-small d-flex flex-column">
+                        <span> Przedstawimy Ci projekty koncepcyjne </span>
+                        <span> w postaci wirtualnego spaceru animowanego</span>
+                        <span> w technologii 3D. </span>
+                      </p>
+                      <a
+                        href="#"
+                        class="btn-main text-green border-bottom border-green p-0 d-flex align-items-center gap-10 pb-4"
+                        ><span class="normal">Dowiedz się więcej</span>
+                        <img
+                          src="./assets/offer/Arrow_Right_Vector.svg"
+                          alt="Arrow Right Vector"
+                          class="vector-arrow"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex">
+                <!-- Card 3 -->
+
+                <div
+                  class="card-offer px-40 py-48 bg-white"
+                  style="max-width: 37.8rem"
+                >
+                  <div class="card-offer-all">
+                    <img
+                      src="./assets/offer/stars.png"
+                      class="card-icon-stars"
+                      alt="Stars Icon"
+                    />
+                    <div
+                      class="card-offer-body pt-36 d-flex flex-column align-items-start"
+                    >
+                      <h5 class="pb-12 m-0">Realizacje</h5>
+                      <p class="pb-64 m-0 inter-body-small d-flex flex-column">
+                        <span> Zrealizujemy Twoje marzenie przy użyciu </span>
+                        <span> najnowszych rozwiązań i zaawansowanych</span>
+                        <span> technologii. </span>
+                      </p>
+                      <a
+                        href="#"
+                        class="btn-main text-green border-bottom border-green p-0 d-flex align-items-center gap-10 pb-4"
+                        ><span class="normal">Dowiedz się więcej</span>
+                        <img
+                          src="./assets/offer/Arrow_Right_Vector.svg"
+                          alt="Arrow Right Vector"
+                          class="vector-arrow"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Company -->
+
+      <section class="section-company bg-green text-gray" id="company">
+        <div class="container-fluid p-0">
+          <div class="row d-flex gap-36 gap-lg-64 p-0 m-0">
+            <div
+              class="col p-0 d-flex justify-content-start pe-44 pe-sm-64 pe-md-0"
+            >
+              <div class="row left-side m-0"></div>
+            </div>
+
+            <div
+              class="col-12 col-md d-flex flex-column justify-content-center p-0"
+            >
+              <div class="row m-0 pe-89">
+                <div
+                  class="col p-0 ps-44 ps-sm-64 ps-lg-96 py-36 py-md-0 d-flex flex-column"
+                >
+                  <span class="subheading pb-16 normal">O firmie</span>
+
+                  <h1 class="pb-24 pb-lg-40 m-0">
+                    Tworzymy <br />
+                    z <span class="italic">pasją</span>
+                  </h1>
+                  <p
+                    class="pb-44 pb-lg-72 pb-md-40 pb-lg-72 inter-body m-0 w-auto"
+                  >
+                    Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
+                    wykwalifikowani projektanci oraz architekci, których
+                    zadaniem jest rozpoznanie i realizacja potrzeb każdego
+                    Klienta. Nasza specjalizacja to przestrzenie nowoczesne,
+                    które charakteryzuje minimalizm, geometria i elegancka
+                    prostota. Tworzymy ogrody małoobsługowe, dostosowane do
+                    współczesnego trybu życia.
+                  </p>
+                  <div>
+                    <button
+                      type="button "
+                      class="btn-main btn--secondary text-gray border border-gray rounded d-flex align-items-center gap-8"
+                    >
+                      <span class="normal"> Poznaj nas bliżej </span>
+                      <img
+                        class="vector-arrow"
+                        src="./assets/about_company/Arroe_Right_Vector.svg"
+                        alt="Arrow right - Vector"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <div class="popup-background hidden p-0"></div>
+      <section
+        class="section-projects text-black w-100 bg-beige pt-120"
+        id="projects"
+      >
+        <div class="container-fluid">
+          <div class="popup bg-gray d-flex justify-content-center p-36">
+            <button class="close-btn">
+              <img
+                src="./assets/projects/close (2).png"
+                alt="Close Button"
+                class="icon-close"
+              /></button
+            ><button class="popup-btn popup-left-arrow">
+              <img src="./assets/hero/Arrow_Left.svg" alt="Arrow Left Slider" />
+            </button>
+            <button class="popup-btn popup-right-arrow">
+              <img
+                src="./assets/hero/Arrow_Right.svg"
+                alt="Arrow Right Slider"
+              />
+            </button>
+            <!-- image -->
+            <div class="slide-box">
+              <img
+                src="./assets/projects/Photo_0.png"
+                class="slide-image"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row pb-96">
+            <div
+              class="col ps-54 ps-sm-66 ps-md-160 d-flex flex-column gap-16 align-items-start align-self-stretch"
+            >
+              <span class="subheading normal text-green">Realizacje</span>
+              <h1>Nasze <span class="italic">projekty</span></h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="image-container-one p-0">
+              <img
+                src="./assets/projects/Photo_0.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_1.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_2.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_4.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_5.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_3.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_7.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_8.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_6.png"
+                alt="Image from gallery"
+              />
+            </div>
+            <div class="image-container-two p-0">
+              <img
+                src="./assets/projects/Photo_0.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_1.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_2.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_4.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_5.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_3.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_7.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_8.png"
+                alt="Image from gallery"
+              />
+              <img
+                src="./assets/projects/Photo_6.png"
+                alt="Image from gallery"
+              />
+            </div>
+
+            <div class="gradient-background"></div>
+            <div class="pt-12 pb-12">
+              <button
+                class="btn-main btn--secondary btn-show-more text-black border border-black rounded d-flex align-items-center gap-8"
+                id="show-more-button"
+              >
+                <span class="inter-body normal">Rozwiń</span>
+                <img
+                  src="./assets/projects/Vector.svg"
+                  alt="Arrow_Down_Vector"
+                  class="vector-arrow"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="bg-gray w-100 text-gray section-contact" id="contact">
+        <div class="container-fluid px-44 px-sm-89 px-lg-200 py-60">
+          <div class="row bg-green">
+            <div
+              class="col d-flex flex-column flex-md-row gap-64 gap-md-0 align-items-md-end justify-content-between px-36 py-47 px-sm-110 py-sm-120 m-0"
+            >
+              <h1>
+                Zostańmy w kontakcie! <br />Znajdziesz nas na
+                <span class="italic">Instagramie</span>.
+              </h1>
+              <div>
+                <p class="inter-body">
+                  Śledź nasze <br />najnowsze realizacje!
+                </p>
+                <button
+                  class="btn-main btn--primary bg-gray text-green rounded d-flex align-items-center btn-instagram"
+                >
+                  <span class="normal"> Instagram </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer 
+      TODO: Zmienić czcionke na tablety i telefony 
+
+      -->
+
+      <footer
+        class="footer container-fluid px-44 px-sm-89 px-md-200 py-80 bg-black text-gray"
+      >
+        <div class="row">
+          <div
+            class="col d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-44 gap-lg-0 align-self-stretch ps-0 pb-48 pb-sm-62"
+          >
+            <a
+              ><img
+                src="./assets/footer/giarddesign.svg"
+                alt="Company Logo"
+                class="footer-logo"
+            /></a>
+            <div
+              class="d-flex flex-column flex-md-row gap-24 align-items-start align-items-md-center"
+            >
+              <p class="m-0 pt-8 pt-md-0 inter-body">
+                Daj znać, co możemy dla Ciebie zrobić!
+              </p>
+              <button
+                type="button"
+                class="btn-main btn--primary bg-green text-gray rounded d-flex align-items-center m-0"
+              >
+                <span class="normal"> Skontaktuj się z nami </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <hr color="#F5F0EC" size="1" />
+          </div>
+        </div>
+        <div class="row">
+          <ul
+            class="col d-flex inter-body-small normal flex-column flex-md-row gap-48 gap-md-48 align-items-start align-items-lg-center pt-48 pt-sm-62 pb-89 pb-sm-120 m-0 ps-0"
+          >
+            <div class="d-flex flex-column flex-lg-row gap-24 gap-md-48">
+              <li><a href="#">Kontakt</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Linkedin</a></li>
+            </div>
+            <div
+              class="d-flex flex-column flex-lg-row gap-24 gap-md-48 ms-md-auto"
+            >
+              <li class=""><a href="#">000-000-000</a></li>
+              <li><a href="#">giarddesign@kontakt.pl</a></li>
+            </div>
+          </ul>
+        </div>
+
+        <div class="row">
+          <div
+            class="col d-flex flex-column flex-md-row align-items-md-center p-0 gap-12 gap-md-0"
+          >
+            <span class="inter-body m-0"> Prawa zastrzeżone &copy; 2022 </span>
+
+            <div class="ms-md-auto mb-0 d-flex align-items-center gap-16">
+              <span class="inter-body"> made by </span>
+
+              <img
+                src="./assets/footer/logo-full-light.svg"
+                alt="Logo Company adRespect"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

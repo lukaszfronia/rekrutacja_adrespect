@@ -21,7 +21,8 @@ h5 {
 
   line-height: 115%;
 }
-span, ul {
+span,
+ul {
   font-family: Inter;
   line-height: 150%;
 }
@@ -40,7 +41,7 @@ ul {
 }
 .italic {
   font-style: italic;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 p {
@@ -88,10 +89,16 @@ a:visited {
   padding: 12px 22px 14px 22px;
 }
 
+.vector-arrow {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
+
   z-index: 993;
   background-color: #ffffff;
 }
