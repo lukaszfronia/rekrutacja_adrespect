@@ -133,14 +133,14 @@
 
   .btn-main {
     span {
-      font-size: 1.2rem;
+      font-size: 1.1rem !important;
     }
   }
   .btn--primary {
-    padding: 10px 14px 12px 14px;
+    padding: 8px 14px 10px 14px;
   }
   .btn--secondary {
-    padding: 10px 12px 12px 12px;
+    padding: 8px 12px 10px 12px;
   }
 
   .vector-arrow {
@@ -327,12 +327,12 @@
   //////////////////////// Hero & Company \\\\\\\\\\\\\\\\\\\\\\\\\\\
   .section-hero {
     .right-side {
-      padding: 58.1rem 39.6rem 0px 0px;
+      padding: 70.1rem 39.6rem 0px 0px;
     }
   }
   .section-company {
     .left-side {
-      padding: 58.1rem 0px 0px 0px;
+      padding: 70.1rem 0px 0px 0px;
     }
   }
   .section-hero,
@@ -417,16 +417,6 @@
   }
   //////////////////////// Hero & Company \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-  .section-hero {
-    .right-side {
-      padding: 48.1rem 39.6rem 0px 0px;
-    }
-  }
-  .section-company {
-    .left-side {
-      padding: 48.1rem 0px 0px 0px;
-    }
-  }
   .section-hero,
   .section-company {
     h1 {

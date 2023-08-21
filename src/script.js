@@ -85,7 +85,7 @@ const slideDirection = (direction) => {
 };
 
 const changeSlide = (i) => {
-  let imgPath = `./assets/projects/Photo_${i}.png`;
+  let imgPath = `../assets/projects/Photo_${i}.webp`;
   slideImg.src = imgPath;
 
   currentSlide = i;
